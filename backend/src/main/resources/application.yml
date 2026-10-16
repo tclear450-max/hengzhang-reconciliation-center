@@ -1,0 +1,34 @@
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  port: ${SERVER_PORT:18180}
+  servlet:
+    session:
+      timeout: 60m
+      cookie:
+        http-only: true
+        same-site: strict
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:h2:file:./data/hengzhang;DB_CLOSE_ON_EXIT=FALSE}
+    username: sa
+    password: ${DB_PASSWORD:}
+  sql:
+    init:
+      mode: always
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
+  jackson:
+    time-zone: Asia/Hong_Kong
+    default-property-inclusion: non_null
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          no-cache: true
+app:
+  demo-data: ${DEMO_DATA:true}
+  admin-password: ${ADMIN_PASSWORD:demo123456}
+  reviewer-password: ${REVIEWER_PASSWORD:demo123456}
+  scheduling-enabled: ${SCHEDULING_ENABLED:false}

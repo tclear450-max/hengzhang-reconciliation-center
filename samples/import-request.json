@@ -1,0 +1,8 @@
+{
+  "channelId": 1,
+  "source": "PLATFORM",
+  "businessDate": "2026-10-15",
+  "rows": [
+    {"externalId":"API-P-001","orderNo":"API-ORDER-001","businessType":"PAYMENT","amount":"100.00","status":"SUCCESS","tradeDate":"2026-10-15"}
+  ]
+}
